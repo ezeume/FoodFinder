@@ -1,159 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant in Philly | Welcome</title>
 
-  <title>Restaurant in Philly | Welcome</title>
+    <link
+      rel="stylesheet"
+      href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body,
+    h1 {
+      font-family: "Maven Pro", sans-serif;
+    }
 
-  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+    .hero-section {
+      background: url("https://images.pexels.com/photos/326279/pexels-photo-326279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+        70% no-repeat;
+      background-size: cover;
+      height: 45vh;
+      text-align: center;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
 
-</head>
-<style>
-  body,
-  h1 {
-    font-family: 'Maven Pro', sans-serif;
-  }
+    .hero-section .hero-section-text {
+      color: #fefefe;
+      text-shadow: 1px 1px 2px #0a0a0a;
+      font-size: 5em;
+    }
 
-  .hero-section {
-    background: url("https://images.pexels.com/photos/326279/pexels-photo-326279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") 70% no-repeat;
-    background-size: cover;
-    height: 45vh;
-    text-align: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-bottom: 15px;
-  }
+    .searchbar {
+      margin: 1rem;
+    }
 
-  .hero-section .hero-section-text {
-    color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
-    font-size: 5em;
-  }
+    .search-field {
+      width: 0;
+      height: 40px;
+      padding: 0;
+      border-radius: 50px;
+      border: none;
+      transition: all 0.5s ease;
+    }
 
-  .searchbar {
-    margin: 1rem;
-  }
+    .expand-search {
+      width: 80%;
+      max-width: calc(80% - 3rem);
+      border: 1px solid #c9c9c9;
+      padding: 0.5rem;
+    }
 
-  .search-field {
-    width: 0;
-    height: 40px;
-    padding: 0;
-    border-radius: 50px;
-    border: none;
-    transition: all 0.5s ease;
+    svg {
+      width: 20px;
+      height: 16px;
+    }
 
-  }
+    .button {
+      border-radius: 50px;
+    }
 
-  .expand-search {
-    width: 80%;
-    max-width: calc(80% - 3rem);
-    border: 1px solid #c9c9c9;
-    padding: .5rem;
-  }
+    .input-field {
+      border-radius: -1px;
+    }
 
-  svg {
-    width: 20px;
-    height: 16px;
-  }
+    #map-div {
+      position: sticky;
+      top: 12em;
+    }
 
-  .button {
-    border-radius: 50px;
-  }
+    #map {
+      height: 350px;
+      width: 85%;
+    }
 
-  .input-field {
-    border-radius: -1px;
-  }
+    #searchB {
+      height: 40px;
+      margin-left: 2px;
+    }
 
-  #map-div {
-    position: sticky;
-    top: 12em;
-  }
+    #results {
+      background-size: cover;
+    }
 
-  #map {
-    height: 350px;
-    width: 85%; 
-  }
+    a h1:hover,
+    .locate:hover {
+      color: tomato;
+      cursor: pointer;
+    }
 
-  #searchB {
-    height: 40px;
-    margin-left: 2px;
-  }
+    .pic {
+      background: url(https://images.pexels.com/photos/349610/pexels-photo-349610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+        50% no-repeat;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+  </style>
 
-  #results {
-    background-size: cover;
-  
-  }
-
-  a h1:hover, .locate:hover {
-    color: tomato;
-    cursor: pointer;
-
-  }
-
-  .pic {
-    background: url(https://images.pexels.com/photos/349610/pexels-photo-349610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) 50% no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
-  }
-</style>
-
-<body class="pic">
-  <div class="hero-section">
-
-    <div>
-      <h1 class="hero-section-text">Food Finder</h1>
+  <body class="pic">
+    <div class="hero-section">
+      <div>
+        <h1 class="hero-section-text">Food Finder</h1>
+      </div>
     </div>
-  </div>
 
-  <div class="input-group searchbar row">
-    <input class="input-field search-field expand-search medium-8 columns" id="searchfield" type="search"
-      placeholder="What kind of food are you looking for?..." />
+    <div class="input-group searchbar row">
+      <input
+        class="input-field search-field expand-search medium-8 columns"
+        id="searchfield"
+        type="search"
+        placeholder="What kind of food are you looking for?..."
+      />
 
-    <select id="limit" class="medium-3 columns">
-      <option value="1">Limit to 1 result</option>
-      <option value="5">Limit to 5 results</option>
-      <option selected value="10">Limit to 10 results</option>
-      <option value="20">Limit to 20 results</option>
-    </select>
+      <select id="limit" class="medium-3 columns">
+        <option value="1">Limit to 1 result</option>
+        <option value="5">Limit to 5 results</option>
+        <option selected value="10">Limit to 10 results</option>
+        <option value="20">Limit to 20 results</option>
+      </select>
 
-
-    <button class="button search medium-1 columns" id="searchB"><svg width="100" height="100" viewBox="0 0 100 100">
-        <path fill="#FFF" fill-rule="evenodd"
-          d="M42.117,12.246 C50.1209,12.246 57.797,15.4257 63.453,21.0858 C69.1132,26.742 72.2928,34.4178 72.2928,42.4218 C72.2928,50.4258 69.1131,58.1018 63.453,63.7578 C57.7968,69.418 50.121,72.5976 42.117,72.5976 C34.1131,72.5976 26.437,69.4179 20.781,63.7578 C15.1208,58.1016 11.9412,50.4258 11.9412,42.4218 C11.9412,34.4178 15.1209,26.7418 20.781,21.0858 C26.4372,15.4256 34.113,12.246 42.117,12.246 L42.117,12.246 Z M76.0828827,67.3362833 C82.3527829,58.7859894 85.2617455,48.0434678 83.9173,37.22271 C82.0618,22.28871 72.3743,9.47671 58.5153,3.61771 L58.51139,3.61771 C53.32389,1.41851 47.74139,0.28961 42.10539,0.29741 L42.117,0.305 C29.058,0.30891 16.742,6.3675 8.769001,16.707 C0.7924008,27.047 -1.933999,40.5 1.382301,53.129 C4.698701,65.758 13.6833,76.137 25.7103,81.223 L25.7103,81.22691 C39.5733,87.08631 55.5113,85.10191 67.5153,76.02771 C67.5852345,75.9748392 67.6549736,75.9217748 67.724517,75.8685177 L91.555,99.6990032 L100.0003,91.253703 L76.0828827,67.3362833 Z" />
-      </svg></button>
-  </div>
-
-  <div class="row">
-    <div id="map-div" class="medium-8 columns">
-      <div id="map"></div>
-
+      <button class="button search medium-1 columns" id="searchB">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+          <path
+            fill="#FFF"
+            fill-rule="evenodd"
+            d="M42.117,12.246 C50.1209,12.246 57.797,15.4257 63.453,21.0858 C69.1132,26.742 72.2928,34.4178 72.2928,42.4218 C72.2928,50.4258 69.1131,58.1018 63.453,63.7578 C57.7968,69.418 50.121,72.5976 42.117,72.5976 C34.1131,72.5976 26.437,69.4179 20.781,63.7578 C15.1208,58.1016 11.9412,50.4258 11.9412,42.4218 C11.9412,34.4178 15.1209,26.7418 20.781,21.0858 C26.4372,15.4256 34.113,12.246 42.117,12.246 L42.117,12.246 Z M76.0828827,67.3362833 C82.3527829,58.7859894 85.2617455,48.0434678 83.9173,37.22271 C82.0618,22.28871 72.3743,9.47671 58.5153,3.61771 L58.51139,3.61771 C53.32389,1.41851 47.74139,0.28961 42.10539,0.29741 L42.117,0.305 C29.058,0.30891 16.742,6.3675 8.769001,16.707 C0.7924008,27.047 -1.933999,40.5 1.382301,53.129 C4.698701,65.758 13.6833,76.137 25.7103,81.223 L25.7103,81.22691 C39.5733,87.08631 55.5113,85.10191 67.5153,76.02771 C67.5852345,75.9748392 67.6549736,75.9217748 67.724517,75.8685177 L91.555,99.6990032 L100.0003,91.253703 L76.0828827,67.3362833 Z"
+          />
+        </svg>
+      </button>
     </div>
-    <div class="medium-4 columns" id="results">
+
+    <div class="row">
+      <div id="map-div" class="medium-8 columns">
+        <div id="map"></div>
+      </div>
+      <div class="medium-4 columns" id="results"></div>
     </div>
-  </div>
-  
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/js/foundation.min.js"></script>
-  <script src="script.js"></script>
-  <script src="map.js"></script>
-  <script
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/js/foundation.min.js"></script>
+    <script src="script.js"></script>
+    <script src="map.js"></script>
+    <script
       async
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPMGWoQW4S80xc4w2QXj3kAthb8ONk3I0&callback=initMap"
       ;
     ></script>
-</body>
-
+  </body>
 </html>
