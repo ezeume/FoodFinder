@@ -16,11 +16,11 @@ $("#searchB").on("click", function (event) {
       newDiv.addClass("result-div")
       var title = $("<a href=" + response.restaurants[i].restaurant.url + " target='_blank'><h1>" + response.restaurants[i].restaurant.name + "</h1></a>")
       var cuisine = $("<p>" + response.restaurants[i].restaurant.cuisines + "</p>");
-	  cuisine.css("font-style", "italic");
+	  cuisine.css("font-style", "arial");
       cuisine.css("color", "#a00505");
       var address = $("<p><b>Address:</b> " + response.restaurants[i].restaurant.location.address + "</p>")
       address.attr("data-name", response.restaurants[i].restaurant.R.res_id)
-	  address.css("font-style", "italic");
+	  address.css("font-style", "arial");
 	  address.css("font-size","16pt")
       address.addClass("locate")
       var rating = $("<p><b>Rating:</b> " + response.restaurants[i].restaurant.user_rating.aggregate_rating + "/5 &#11088;</p>")
