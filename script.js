@@ -6,6 +6,7 @@ $("#searchB").on("click", function (event) {
   var limit = $("#limit").val();
   var queryURL = "https://developers.zomato.com/api/v2.1/search?q=" + foodType + "&count=" + limit + "&lat=39.9526&lon=-75.1652&radius=1000&apikey=14ff5e7acc0cefd1cb956054c40f30fc"
 
+//Ajax call for getting food resturant results
   $.ajax({
     url: queryURL,
     method: "GET"
