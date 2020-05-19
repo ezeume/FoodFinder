@@ -1,3 +1,4 @@
+//Map
 var lat = "";
 var lng = "";
 
@@ -10,6 +11,7 @@ function initMap() {
   });
 }
 
+//Map location url + key
 function mapLoc() {
   console.log("working");
   var location = $(this).attr("data-name");
@@ -19,6 +21,7 @@ function mapLoc() {
     location +
     "&apikey=14ff5e7acc0cefd1cb956054c40f30fc";
 
+//Ajax call to get search results on map
   $.ajax({
     url: queryLOC,
     method: "GET"
@@ -37,18 +40,19 @@ function mapLoc() {
   });
 }
 $(document).on("click", ".locate", mapLoc);
-/*
-addMarker({ lat: lat, lng: lng });
-function addMarker(coords) {
-  var marker = new google.maps.Marker({
-    position: coords,
-    map: map
-  });
-  var infoWindow = new google.maps.InfoWindow({
-    content: "<h5>restaurant name</h5>"
-  });
-  marker.addListener("click", function() {
-    infoWindow.open(map, marker);
-  });
-}
-*/
+
+
+// addMarker({ lat: lat, lng: lng });
+// function addMarker(coords) {
+//   var marker = new google.maps.Marker({
+//     position: coords,
+//     map: map
+//   });
+//   var infoWindow = new google.maps.InfoWindow({
+//     content: "<h5>restaurant name</h5>"
+//   });
+//   marker.addListener("click", function() {
+//     infoWindow.open(map, marker);
+//   });
+// }
+
