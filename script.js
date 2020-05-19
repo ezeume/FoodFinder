@@ -1,3 +1,4 @@
+//Search button search selected food on click
 $("#searchB").on("click", function (event) {
   event.preventDefault();
   $("#results").empty();
