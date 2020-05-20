@@ -11,7 +11,7 @@ function initMap() {
   });
 }
 
-//Map location url + key
+//Ajax call to get search results on map
 function mapLoc() {
   console.log("working");
   var location = $(this).attr("data-name");
@@ -21,7 +21,7 @@ function mapLoc() {
     location +
     "&apikey=14ff5e7acc0cefd1cb956054c40f30fc";
 
-//Ajax call to get search results on map
+
   $.ajax({
     url: queryLOC,
     method: "GET"
