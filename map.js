@@ -21,7 +21,6 @@ function mapLoc() {
     location +
     "&apikey=14ff5e7acc0cefd1cb956054c40f30fc";
 
-
   $.ajax({
     url: queryLOC,
     method: "GET"
