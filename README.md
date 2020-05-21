@@ -2,6 +2,6 @@ This is an application that allows the user to search for places to eat in Phila
 
 [Here is a link to the application.](https://ethanl150.github.io/FoodFinder/)
 
-![Image of Food Finder application](foodfinder1.png)
+![Image of Food Finder application](food.png)
 
-![Image of Food Finder application](foodfinder2.png)
+![Image of Food Finder application](finder.png)
